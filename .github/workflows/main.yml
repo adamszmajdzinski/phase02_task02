@@ -5,5 +5,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: ls ${{ github.workspace }}
+      - name: Check out repository code
+        uses: actions/checkout@v2
       - run: git clone -b master --single-branch --depth 1 https://github.com/WordPress/WordPress.git 
       - run: ls ${{ github.workspace }}
